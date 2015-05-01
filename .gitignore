@@ -1,0 +1,9 @@
+# Dependancies
+node_modules
+bower_components
+
+# Distribution files
+public
+
+# Database
+db

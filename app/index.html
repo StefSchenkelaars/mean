@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>MEAN</title>
+    <link rel="stylesheet" href="styles/vendors.css">
+    <link rel="stylesheet" href="styles/app.css">
+  </head>
+  <body ng-app='mean' ng-controller='MainController as main'>
+
+    <div class='col-xs-12'>
+
+      <alerts></alerts>
+
+      <h1>Main Controller <small ng-show='main.yourName'>Hello {{main.yourName}}</small></h1>
+      <div class='form-group'>
+        <label for='name'>Name:</label>
+        <input id='name' type='text' ng-model='main.yourName' placeholder='Enter a name here' class='form-control'>
+      </div>
+
+      <hr>
+
+      <h1>Users module</h1>
+      <user-list></user-list>
+      <user-form></user-form>
+
+    </div>
+
+    <script src='scripts/vendors.js'></script>
+    <script src='scripts/app.js'></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.slide-up-animation {
+
+  position: relative;
+
+  &.ng-move,
+  &.ng-enter,
+  &.ng-leave {
+    transition:all linear 0.5s;
+  }
+
+  &.ng-leave.ng-leave-active,
+  &.ng-move,
+  &.ng-enter {
+    top: 300px;
+  }
+
+  &.ng-leave,
+  &.ng-move.ng-move-active,
+  &.ng-enter.ng-enter-active {
+    top: 0;
+  }
+}

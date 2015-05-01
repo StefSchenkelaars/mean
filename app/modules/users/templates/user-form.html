@@ -1,0 +1,8 @@
+<div ng-controller="main.users.UserFormController as userForm">
+  <h3>Add User</h3>
+  <form name='newUserForm' ng-submit='userForm.saveUser()' novalidate>
+    <input type='text' placeholder='Name' ng-model='userForm.newUser.name' class='form-control' required autofocus>
+    <input type='text' placeholder='Email' ng-model='userForm.newUser.email' class='form-control' required>
+    <button type='submit' class='btn btn-primary btn-block' ng-disabled='newUserForm.$invalid'>Create User</button>
+  </form>
+</div>

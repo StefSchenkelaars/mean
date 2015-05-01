@@ -1,0 +1,22 @@
+<div ng-controller='main.users.UserListController as userList'>
+  <h3>All users</h3>
+  <table class='table table-striped' ng-show='userList.users.length'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='user in userList.users'>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><a><i ng-click='userList.destroy(user._id)' class='fa fa-trash'></i></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <div ng-hide='userList.users.length'>
+    No users found
+  </div>
+</div>
